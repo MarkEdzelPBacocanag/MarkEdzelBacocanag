@@ -31,6 +31,7 @@ body {
     display: flex;
     flex-direction: row;
     align-items: center;
+    animation: third 1.3s ease-in-out;
 }
 
 .navigationBar {
@@ -41,7 +42,7 @@ body {
     border-radius: 10px;
     box-shadow: 1px 2px 2px rgb(7, 7, 7);
     z-index: 3;
-    animation: start 1.3s ease-in-out;
+    animation: first 1.3s ease-in-out;
 }
 
 /*Spacing between sections*/
@@ -66,6 +67,7 @@ body {
     padding: 30px;
     backdrop-filter: blur(20px);
     margin: 0px 50px 0px 50px;
+    animation: fourth 1.3s ease-in-out;
 }
 
 ul li {
@@ -79,6 +81,7 @@ ul li {
     padding: 30px;
     backdrop-filter: blur(20px);
     margin: 0px 50px 0px 50px;
+    animation: first 1.3s ease-in-out;
 }
 
 .projects {
@@ -87,6 +90,7 @@ ul li {
     padding: 30px;
     backdrop-filter: blur(20px);
     margin: 0px 50px 0px 50px;
+    animation: fourth 1.3s ease-in-out;
 }
 
 .contacts {
@@ -95,6 +99,7 @@ ul li {
     padding: 30px;
     backdrop-filter: blur(20px);
     margin: 0px 50px 0px 50px;
+    animation: fifth 1.3s ease-in-out;
 }
 
 
@@ -225,7 +230,7 @@ img {
     right: 20px;
     border-radius: 120px;
     z-index: 1;
-    animation: scale 1.3s ease-in;
+    animation: second 1.3s ease-in;
 }
 
 /*All p*/
@@ -240,7 +245,7 @@ P {
     width: 90px;
     height: 20px;
     padding: 2px;
-/*     box-shadow: 1px 2px 2px rgb(7, 7, 7); */
+    /*     box-shadow: 1px 2px 2px rgb(7, 7, 7); */
     overflow: hidden;
 }
 
@@ -373,23 +378,56 @@ th {
 
 /* Key frames for loading in */
 
-@keyframes start {
-    from{
-            transform: translateX(-100px);
-            opacity: 0;;
-        }
-    to{
+@keyframes first {
+    from {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+
+    to {
         transform: translateX(1px);
-        opacity: 1;
     }
 }
 
-@keyframes scale {
-  from{
+@keyframes second {
+    from {
         transform: scale(0);
         opacity: 0;
     }
-    to{
+
+    to {
         transform: scale(1);
-    } 
+    }
+}
+
+@keyframes third {
+    from {
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(1px);
+    }
+}
+
+@keyframes fourth {
+    from {
+        transform: translateX(100px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(1px);
+    }
+}
+@keyframes fifth {
+    from {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(1px);
+    }
 }
