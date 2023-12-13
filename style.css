@@ -35,17 +35,19 @@ body {
 
 .navigationBar {
     display: flex;
-    flex-direction: column;
-    justify-content: baseline;
-    position: relative;
+    flex-direction: row;
+    position: fixed;
     gap: 20px;
+    border-radius: 10px;
+    box-shadow: 1px 2px 2px rgb(7, 7, 7);
+    z-index: 3;
 }
 
 /*Spacing between sections*/
 .secondFoot {
     display: grid;
     grid-template-columns: auto;
-    row-gap: 30%;
+    row-gap: 10%;
 }
 
 /*design of each sections*/
@@ -98,7 +100,7 @@ ul li {
 
 /*hamburger-menu*/
 
-:root {
+/* :root {
     --bar-width: 60px;
     --bar-height: 8px;
     --hamburger-gap: 6px;
@@ -191,7 +193,7 @@ ul li {
 
 .hamburger-menu:has(input:checked)+.sidebar {
     translate: 0;
-}
+} */
 
 /*content in layouts*/
 img {
@@ -226,7 +228,6 @@ img {
 
 /*All p*/
 P {
-    display: inline-block;
     margin: 0px;
     color: #ffffff;
     border-radius: 15px;
@@ -237,16 +238,13 @@ P {
     width: 90px;
     height: 20px;
     padding: 2px;
-    box-shadow: 1px 2px 2px rgb(7, 7, 7);
-    position: relative;
+/*     box-shadow: 1px 2px 2px rgb(7, 7, 7); */
     overflow: hidden;
-    display: flex;
 }
 
 .navigationBar div p {
     display: inline-block;
     position: relative;
-    font: 20px;
     font-weight: bold;
     color: rgb(160, 154, 157);
 }
