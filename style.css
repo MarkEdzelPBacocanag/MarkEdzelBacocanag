@@ -41,6 +41,7 @@ body {
     border-radius: 10px;
     box-shadow: 1px 2px 2px rgb(7, 7, 7);
     z-index: 3;
+    animation: start 1.3s ease-in-out;
 }
 
 /*Spacing between sections*/
@@ -224,6 +225,7 @@ img {
     right: 20px;
     border-radius: 120px;
     z-index: 1;
+    animation: scale 1.3s ease-in;
 }
 
 /*All p*/
@@ -367,4 +369,27 @@ th {
     color: #000000;
     background: #ffffff;
     cursor: pointer;
+}
+
+/* Key frames for loading in */
+
+@keyframes start {
+    from{
+            transform: translateX(-100px);
+            opacity: 0;;
+        }
+    to{
+        transform: translateX(1px);
+        opacity: 1;
+    }
+}
+
+@keyframes scale {
+  from{
+        transform: scale(0);
+        opacity: 0;
+    }
+    to{
+        transform: scale(1);
+    } 
 }
