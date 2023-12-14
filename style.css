@@ -16,20 +16,33 @@
 body {
     padding-bottom: 1000px;
     background-image: url(Bg.jpg);
+    width: 100%;
 }
 
 /*layout*/
 .base {
+    width: 100%;
     margin: 0px;
     margin-top: 1%;
-    display: grid;
-    grid-template-rows: auto 1fr;
-    row-gap: 5%;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.firstFoot {
+    display: flex;
+    flex: 1;
+    flex-direction: row-reverse;
+    align-items: center;
+    margin: 0px 0px 0px 1%;
 }
 
 .contents {
+    margin: 5% 0px 10% 0px;
     display: flex;
+    flex: 1;
     flex-direction: row;
+    gap: 5%;
     align-items: center;
     animation: third 1.3s ease-in-out;
 }
@@ -37,9 +50,12 @@ body {
 .navigationBar {
     display: flex;
     flex-direction: row;
+    flex: 1;
     position: fixed;
     gap: 20px;
     border-radius: 10px;
+    padding: 2% 0px 0px 0px;
+    border: 0.5px outset rgb(75, 69, 69);
     box-shadow: 1px 2px 2px rgb(7, 7, 7);
     z-index: 3;
     animation: first 1.3s ease-in-out;
@@ -47,9 +63,10 @@ body {
 
 /*Spacing between sections*/
 .secondFoot {
-    display: grid;
-    grid-template-columns: auto;
-    row-gap: 10%;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+
 }
 
 /*design of each sections*/
@@ -66,7 +83,7 @@ body {
     border-radius: 10px;
     padding: 30px;
     backdrop-filter: blur(20px);
-    margin: 0px 50px 0px 50px;
+    margin: 10% 50px 10% 50px;
     animation: fourth 1.3s ease-in-out;
 }
 
@@ -76,29 +93,32 @@ ul li {
 }
 
 .services {
-    border: 5px outset black;
+    border: 5px outset rgb(46, 45, 45);
     border-radius: 10px;
     padding: 30px;
     backdrop-filter: blur(20px);
-    margin: 0px 50px 0px 50px;
+    margin: 10% 50px 10% 50px;
     animation: first 1.3s ease-in-out;
 }
 
 .projects {
-    border: 5px outset black;
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+    border: 5px outset rgb(46, 45, 45);
     border-radius: 10px;
     padding: 30px;
     backdrop-filter: blur(20px);
-    margin: 0px 50px 0px 50px;
+    margin: 10% 50px 10% 50px;
     animation: fourth 1.3s ease-in-out;
 }
 
 .contacts {
-    border: 5px outset black;
+    border: 5px outset rgb(46, 45, 45);
     border-radius: 10px;
     padding: 30px;
     backdrop-filter: blur(20px);
-    margin: 0px 50px 0px 50px;
+    margin: 10% 50px 10% 50px;
     animation: fifth 1.3s ease-in-out;
 }
 
@@ -202,9 +222,6 @@ ul li {
 } */
 
 /*content in layouts*/
-img {
-    height: 30px;
-}
 
 .navigationBar .one,
 .navigationBar .two,
@@ -216,21 +233,28 @@ img {
 
 
 .pict {
-    height: 400px;
+    height: 100%;
+    width: 100%;
     border-radius: 400px;
-    margin: 0px 300px 0px 100px;
+    margin: 0px 40% 0px 10%;
     border: 10px inset rgb(172, 165, 165);
 }
 
+/*logo configuration*/
 .logo img {
-    position: fixed;
-    width: 120px;
-    height: 120px;
-    top: 20px;
-    right: 20px;
+    width: 100%;
+    height: 100%;
     border-radius: 120px;
-    z-index: 1;
     animation: second 1.3s ease-in;
+}
+
+.logo {
+    position: fixed;
+    height: 120px;
+    width: 120px;
+    top: 20px;
+    left: 20px;
+    z-index: 1;
 }
 
 /*All p*/
@@ -321,26 +345,23 @@ a:link {
 }
 
 /*project pictures design*/
-table {
+.insides {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.order {
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+    gap: 50px;
+    margin: 5% 0px 0px 0px;
+}
+
+.order img {
     width: 100%;
-    height: 400px;
-}
-
-th {
-    margin: 0px;
-    padding: 0px;
-}
-
-.projectFirst {
-    height: 300px;
-}
-
-.projectSecond {
-    height: 300px;
-}
-
-.projectThird {
-    height: 300px;
+    height: auto;
 }
 
 /*contacts img design*/
@@ -421,6 +442,7 @@ th {
         transform: translateX(1px);
     }
 }
+
 @keyframes fifth {
     from {
         transform: translateY(100px);
