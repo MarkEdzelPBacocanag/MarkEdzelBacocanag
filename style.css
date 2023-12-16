@@ -54,6 +54,7 @@ body {
     border-radius: 10px;
     padding: 2% 0px 0px 0px;
     border: 0.5px outset rgb(75, 69, 69);
+    border-bottom-right-radius: 0px;
     box-shadow: 1px 2px 2px rgb(7, 7, 7);
     z-index: 3;
     animation: first 1.3s ease-in-out;
@@ -399,7 +400,16 @@ a:link {
     background: #ffffff;
     cursor: pointer;
 }
-
+/* Copyright */
+.cpyrights{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 0 10px 0px;
+    border: 5px double black;
+    border-left: 0px;
+    border-right: 0px;
+}
 /* Key frames for loading in */
 
 @keyframes first {
