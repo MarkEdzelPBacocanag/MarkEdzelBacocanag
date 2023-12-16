@@ -65,7 +65,7 @@ body {
     display: flex;
     flex-direction: column;
     flex: 1;
-
+    margin-top: 10%;
 }
 
 /*design of each sections*/
