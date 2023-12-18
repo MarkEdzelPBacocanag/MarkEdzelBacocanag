@@ -406,9 +406,6 @@ a:link {
     align-items: center;
     justify-content: center;
     padding: 10px 0 10px 0px;
-    border: 5px double black;
-    border-left: 0px;
-    border-right: 0px;
 }
 /* Key frames for loading in */
 
