@@ -73,7 +73,7 @@ body {
     border: 5px outset black;
     border-radius: 10px;
     padding: 30px;
-    backdrop-filter: blur(20px);
+    backdrop-filter: blur(10px);
     margin: 0px 50px 0px 50px;
 }
 
@@ -81,7 +81,7 @@ body {
     border: 5px outset black;
     border-radius: 10px;
     padding: 30px;
-    backdrop-filter: blur(20px);
+    backdrop-filter: blur(10px);
     margin: 10% 50px 10% 50px;
     animation: fourth 1.3s ease-in-out;
 }
@@ -95,7 +95,7 @@ ul li {
     border: 5px outset rgb(46, 45, 45);
     border-radius: 10px;
     padding: 30px;
-    backdrop-filter: blur(20px);
+    backdrop-filter: blur(10px);
     margin: 10% 50px 10% 50px;
     animation: first 1.3s ease-in-out;
 }
@@ -107,7 +107,7 @@ ul li {
     border: 5px outset rgb(46, 45, 45);
     border-radius: 10px;
     padding: 30px;
-    backdrop-filter: blur(20px);
+    backdrop-filter: blur(10px);
     margin: 10% 50px 10% 50px;
     animation: fourth 1.3s ease-in-out;
 }
@@ -115,15 +115,17 @@ ul li {
 .contacts {
     border: 5px outset rgb(46, 45, 45);
     border-radius: 10px;
-    backdrop-filter: blur(20px);
+    backdrop-filter: blur(10px);
     padding: 5% 5% 3% 5%;
     margin: 10% 50px 10% 50px;
     animation: fifth 1.3s ease-in-out;
 }
-.conatcs div{
+
+.conatcs div {
     display: inline;
 }
-.contacts .p{
+
+.contacts .p {
     margin: 0px 0px 5% -2%;
 }
 
@@ -240,9 +242,8 @@ ul li {
 .pict {
     height: 100%;
     width: 100%;
-    border-radius: 400px;
-    margin: 0px 40% 0px 10%;
-    border: 10px inset rgb(172, 165, 165);
+    backdrop-filter: blur(10px);
+    padding: 0px;
 }
 
 /*logo configuration*/
@@ -400,14 +401,172 @@ a:link {
     background: #ffffff;
     cursor: pointer;
 }
+
 /* Copyright */
-.cpyrights{
+.cpyrights {
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 10px 0 10px 0px;
 }
+
+/* Border animation */
+.card {
+    position: relative;
+    color: #fff;
+    background: transparent;
+    overflow: hidden;
+    border-top: 10px outset rgb(101, 100, 100);
+    border-right: 10px outset rgba(0, 0, 0, 1);
+    border-bottom: 10px outset rgba(0, 0, 0, 1);
+    border-left: 10px outset rgba(101, 100, 100, 1);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0px 0px 0px 10%;
+    padding: 0px;
+}
+span {
+    position: absolute;
+    border-radius: 100vmax;
+  }
+  
+  .top {
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 10px;
+    background: linear-gradient(
+      90deg,
+      transparent 50%,
+      rgba(101, 100, 100, 0.5),
+      rgb(101, 100, 100)
+    );
+  }
+  
+  .bottom {
+    right: 0;
+    bottom: 0;
+    height: 10px;
+    background: linear-gradient(
+      90deg,
+      rgb(0, 0, 0),
+      rgba(0, 0, 0, 0.5),
+      transparent 50%
+    );
+  }
+  
+  .right {
+    top: 0;
+    right: 0;
+    width: 10px;
+    height: 0;
+    background: linear-gradient(
+      180deg,
+      transparent 30%,
+      rgba(0, 0, 0, 0.5),
+      rgb(0, 0, 0)
+    );
+  }
+  
+  .left {
+    left: 0;
+    bottom: 0;
+    width: 10px;
+    height: 0;
+    background: linear-gradient(
+      180deg,
+      rgb(101, 100, 100),
+      rgba(101, 100, 100, 0.5),
+      transparent 70%
+    );
+  }
+  
+  .top {
+    animation: animateTop 3s ease-in-out infinite;
+  }
+  
+  .bottom {
+    animation: animateBottom 3s ease-in-out infinite;
+  }
+  
+  .right {
+    animation: animateRight 3s ease-in-out infinite;
+  }
+  
+  .left {
+    animation: animateLeft 3s ease-in-out infinite;
+  }
+  
+
 /* Key frames for loading in */
+@keyframes animateTop {
+    25% {
+        width: 100%;
+        opacity: 1;
+    }
+
+    30%,
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes animateBottom {
+
+    0%,
+    50% {
+        opacity: 0;
+        width: 0;
+    }
+
+    75% {
+        opacity: 1;
+        width: 100%;
+    }
+
+    76%,
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes animateRight {
+
+    0%,
+    25% {
+        opacity: 0;
+        height: 0;
+    }
+
+    50% {
+        opacity: 1;
+        height: 100%;
+    }
+
+    55%,
+    100% {
+        height: 100%;
+        opacity: 0;
+    }
+}
+
+@keyframes animateLeft {
+
+    0%,
+    75% {
+        opacity: 0;
+        bottom: 0;
+        height: 0;
+    }
+
+    100% {
+        opacity: 1;
+        height: 100%;
+    }
+}
 
 @keyframes first {
     from {
