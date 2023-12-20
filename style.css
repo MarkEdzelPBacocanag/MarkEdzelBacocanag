@@ -56,6 +56,7 @@ body {
     border: 0.5px outset rgb(75, 69, 69);
     border-bottom-right-radius: 0px;
     box-shadow: 1px 2px 2px rgb(7, 7, 7);
+    backdrop-filter: blur(30px);
     z-index: 3;
     animation: first 1.3s ease-in-out;
 }
@@ -368,18 +369,29 @@ a:link {
 .order img {
     width: 100%;
     height: auto;
+    object-fit: cover;
 }
 
 /*contacts img design*/
 .container {
-    display: grid;
-    grid-template-columns: 50px 100px;
+    display: flex;
+    flex-direction: row;
     align-items: center;
+    flex: 1;
+}
+.links{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    flex: 1;
     gap: 30px;
 }
-
+.imgs{
+    width: 70px;
+}
 .contacts img {
-    height: 60px;
+    height: auto;
+    width: 100%;
 }
 
 .coms p {
@@ -388,6 +400,7 @@ a:link {
     padding: 10px 18px;
     text-decoration: underline;
     font-weight: bold;
+    font-size: 1em;
     color: #ffffff;
     display: inline-block;
     text-align: justify;
