@@ -3,6 +3,8 @@
 * {
     font-family: 'Roboto', Arial, Helvetica, sans-serif;
     font-weight: bold;
+    font-size: x-large;
+    text-align: justify;
 }
 
 * ::after,
@@ -36,7 +38,7 @@ body {
 }
 
 .contents {
-    margin: 5% 0px 10% 0px;
+/*    margin: 5% 0px 10% 0px;*/
     display: flex;
     flex: 1;
     flex-direction: row;
@@ -49,10 +51,12 @@ body {
     display: flex;
     flex-direction: row;
     flex: 1;
+    top: 15px;
+    right: -5px;
     position: fixed;
     gap: 20px;
     border-radius: 10px;
-    padding: 2% 0px 0px 0px;
+    padding: 5px 5px 0px 0px;
     border: 0.5px outset rgb(75, 69, 69);
     border-bottom-right-radius: 0px;
     box-shadow: 1px 2px 2px rgb(7, 7, 7);
@@ -72,10 +76,14 @@ body {
 /*design of each sections*/
 .details {
     border: 5px outset black;
-    border-radius: 10px;
-    padding: 30px;
+    border-radius: 5px;
+    padding: 10px;
     backdrop-filter: blur(10px);
-    margin: 0px 50px 0px 50px;
+/*    margin: 0px 50px 0px 50px;*/
+}
+
+.name{
+    font-size: xx-large;
 }
 
 .aboutMe {
@@ -249,8 +257,9 @@ ul li {
 
 /*logo configuration*/
 .logo img {
-    width: 100%;
-    height: 100%;
+    width: 50%;
+    padding: 0px;
+    margin: 0px;
     border-radius: 120px;
     animation: second 1.3s ease-in;
 }
@@ -259,7 +268,7 @@ ul li {
     position: fixed;
     height: max-height(20%);
     width: 10%;
-    top: 20px;
+    top: 4px;
     left: 20px;
     z-index: 1;
 }
@@ -278,6 +287,8 @@ P {
     padding: 2px;
     /*     box-shadow: 1px 2px 2px rgb(7, 7, 7); */
     overflow: hidden;
+    font-size: large;
+    text-align: center;
 }
 
 .navigationBar div p {
@@ -315,8 +326,6 @@ P {
 .four p::before,
 .fifth p::before {
     box-sizing: border-box;
-    margin: 0;
-    padding: 0;
 }
 
 .one p::after,
@@ -326,12 +335,10 @@ P {
 .fifth p::after {
     content: "";
     box-sizing: border-box;
-    margin: 0;
-    padding: 0;
     display: block;
     position: absolute;
     width: 100%;
-    height: 3px;
+    height: 5px;
     background: rgb(197, 193, 197);
     transform: scale(0);
     transition: transform 0.3s ease-in-out;
